@@ -1,0 +1,49 @@
+@keyframes button_gradient {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0px 0px 20px rgba(34, 203, 213, 0.1);
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0px 0px 20px rgba(34, 203, 213, 0.5);
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0px 0px 20px rgba(34, 203, 213, 0.1);
+  }
+}
+@keyframes rotate_coin_1 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(45deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes translate_wave {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -3000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes translate_coins {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=animations.css.map */

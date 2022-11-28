@@ -1,0 +1,31 @@
+@mixin main_gradient {
+  background: #21272c;
+  background: -webkit-linear-gradient(-45deg, #2d3134 0%, #21272c 100%);
+  background: -moz-linear-gradient(-45deg, #2d3134 0%, #21272c 100%);
+  background: -o-linear-gradient(-45deg, #2d3134 0%, #21272c 100%);
+  background: -ms-linear-gradient(-45deg, #2d3134 0%, #21272c 100%);
+}
+
+@mixin round_out($radius) {
+  border-radius: $radius;
+}
+
+@mixin translateX($value) {
+  transform: translateX($value);
+}
+
+@mixin translateY($value) {
+  transform: translateY($value);
+}
+
+// @mixin coin_animation($coin_number) {
+//   0% {
+//     transform: rotateZ(0deg);
+//   }
+//   50% {
+//     transform: rotateZ(45deg);
+//   }
+//   100% {
+//     transform: rotateZ(0deg);
+//   }
+// }
