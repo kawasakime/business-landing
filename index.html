@@ -19,12 +19,35 @@
     <section id="main-section">
       <header>
         <div class="wrapper">
+          <nav class="mobile">
+            <div class="burger__button">
+              <span></span>
+            </div>
+            <img src="./img/black_logo.png" alt="" />
+            
+          </nav>
           <ul>
             <li>Наши услуги</li>
             <li>Почему мы</li>
-            <li><img class="logo" src="./img/black_logo.png" alt="" /></li>
-            <li>Как мы работаем</li>
             <li>Отзывы</li>
+            <li class="logo"><img src="./img/black_logo.png" alt="" /></li>
+            <li>Как мы работаем</li>
+            <li class="telegram">
+              <a href="https://t.me/" target="_blank">
+                <svg
+                  fill="#2D313450"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="30px"
+                  height="30px"
+                >
+                  <path
+                    d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="phone">Номер телефона:<br />+7 800 555 35 35</li>
           </ul>
         </div>
       </header>
@@ -121,6 +144,285 @@
         </main>
       </div>
     </section>
+
+    <section id="services-section">
+      <div class="wrapper">
+        <div class="title">
+          <h1>НАШИ УСЛУГИ</h1>
+          <p>Доверьте Ваши задачи профессионалам</p>
+        </div>
+        <div class="services">
+          <div class="services__item">
+            <div class="services__item-indicator"></div>
+            <p class="services__item-title">Подготовка основы для бизнеса</p>
+            <ul class="services__item-list">
+              <li>Разработка Вашего бизнес плана</li>
+              <li>Создание мотивации и нормативов для сотрудников</li>
+              <li>Организация внутренней работы/отчетности всего отдела</li>
+              <li>
+                Создание уникального образа вашей компании: разработка продающего сайта и
+                презентации Ваших услуг
+              </li>
+            </ul>
+            <div class="services__item-price">От 40.000 ₽</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-indicator"></div>
+            <p class="services__item-title">
+              Формирование <br />
+              отдела
+            </p>
+            <ul class="services__item-list">
+              <li>HR - поиск сильной команды</li>
+            </ul>
+            <div class="services__item-price">От 25.000 ₽</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-indicator"></div>
+            <p class="services__item-title">Привлечение новых клиентов</p>
+            <ul class="services__item-list">
+              <li>Разработка рекламных компаний</li>
+              <li>Рассылка предложений в мессенджерах, звонки с откликом - 25%</li>
+              <li>Сбор крупных баз клиентов по Вашей нише</li>
+            </ul>
+            <div class="services__item-price">От 30.000 ₽</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-indicator"></div>
+            <p class="services__item-title">Увеличение узнаваемости вашей организации</p>
+            <ul class="services__item-list">
+              <li>Разработка рекламных компаний</li>
+              <li>Рассылка предложений в мессенджерах, звонки с откликом - 25%</li>
+              <li>Сбор крупных баз клиентов по Вашей нише</li>
+            </ul>
+            <div class="services__item-price">От 50.000 ₽</div>
+          </div>
+        </div>
+        <button>Уточнить цену у менеджера</button>
+      </div>
+    </section>
+
+    <section id="grapgic-section">
+      <div class="wrapper">
+        <canvas id="chart"></canvas>
+      </div>
+    </section>
+
+    <section id="what-us-section">
+      <div class="wrapper">
+        <div class="title">
+          <div class="title">
+            <h1>ПОЧЕМУ МЫ</h1>
+            <p>Потому что - ваш пусть, это - наш путь</p>
+          </div>
+          <div class="cards">
+            <div class="cards__item">
+              <img src="./img/card_icon.png" alt="" />
+              <span>Индивидуальный подход</span>
+              <p>
+                Мы не веб-студия конвейерного типа, которая делает сайты в полуавтоматическом
+                режиме. Мы с каждым клиентом работаем индивидуально.
+              </p>
+            </div>
+            <div class="cards__item">
+              <img src="./img/card_icon.png" alt="" />
+              <span>Поддержка проекта</span>
+              <p>Мы будем Вам помогать еще 1 неделю, пока вы не разберетесь в вашем новом сайте.</p>
+            </div>
+            <div class="cards__item">
+              <img src="./img/card_icon.png" alt="" />
+              <span>Скорость и качество</span>
+              <p>
+                Делаем сайты как себе. Быстро и качественно. Моментами вы не будете успевать давать
+                нам материал.
+              </p>
+            </div>
+            <div class="cards__item">
+              <img src="./img/card_icon.png" alt="" />
+              <span>Подбадриваем</span>
+              <p>Можем позвонить Вам если скучно и поднять настроение.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-work-section">
+      <img src="./img/fire.png" alt="" class="fire" />
+      <img src="./img/like.png" alt="" class="like" />
+      <div class="wrapper">
+        <div class="title">
+          <h1>КАК МЫ БУДЕМ РАБОТАТЬ</h1>
+          <p>Выбрав нас, вы сохраните свои деньги</p>
+        </div>
+        <div class="cards">
+          <div class="cards__item">
+            <div class="num">01</div>
+            <span>Анализ конкурентов</span>
+            <p>
+              Изучаем конкурентов и продумываем дизайн, который будет выгодно выделять на их фоне
+            </p>
+          </div>
+          <div class="cards__item">
+            <div class="num">02</div>
+            <span>Разработка и верстка</span>
+            <p>Создаём макет и верстаем на Тильде с использованием кода и zero-блоков</p>
+          </div>
+          <div class="cards__item">
+            <div class="num">03</div>
+            <span>Учим</span>
+            <p>
+              Мы не просто отдаём вам готовый сайт. Мы показываем, как вы сами можете с ним
+              взаимодействовать
+            </p>
+          </div>
+          <div class="cards__item">
+            <div class="num">04</div>
+            <span>Поддержка сайта</span>
+            <p>Даже после создания сайта, мы оказываем поддержку в течении недели</p>
+          </div>
+          <div class="cards__item">
+            <div class="num">05</div>
+            <span>SEO оптимизация</span>
+            <p>
+              Наши клиенты получают сайт, который работает не только на теплую аудиторию, но и
+              холодную
+            </p>
+          </div>
+          <div class="cards__item">
+            <div class="num">06</div>
+            <span>Создаем контент</span>
+            <p>Пишем тексты для сайта, которые будут привлекать клиентов и продавать</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews-section">
+      <div class="wrapper">
+        <div class="title">
+          <h1>СЕРТИФИКАТ И ОТЗЫВЫ</h1>
+          <p>Только настоящие отзывы от бывших клиентов</p>
+        </div>
+        <div class="container">
+          <div class="certificate">
+            <img src="./img/certificate.jpg" alt="" />
+          </div>
+          <div class="reviews">
+            <div class="reviews__item">
+              <img src="./img/reviews/review_1.png" alt="" />
+              <span>Екатерина</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="rating">
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+              </div>
+            </div>
+            <div class="reviews__item">
+              <img src="./img/reviews/review_2.png" alt="" />
+              <span>Анастасия</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="rating">
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+              </div>
+            </div>
+            <div class="reviews__item">
+              <img src="./img/reviews/review_3.png" alt="" />
+              <span>Абдул</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="rating">
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+                <img src="./img/star.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="form-section">
+      <div class="img-container">
+        <div class="gradient"></div>
+      </div>
+      <div class="light-1"></div>
+      <div class="light-2"></div>
+      <div class="wrapper">
+        <span>Готовы предварительно обсудить проект?</span>
+        <p>
+          Чтобы начать, нужно всего ответить на несколько вопросов. Мы поймем задачу чуть лучше, а
+          также сможем рассчитать цену проекта.
+        </p>
+        <p>
+          Формирование стоимости абсолютно прозрачное, поэтому при расчете отталкиваемся от
+          количества смысловых блоков, их функциональных возможностей.
+        </p>
+        <form action="">
+          <input class="user_name" type="text" placeholder="Введите имя" />
+          <input class="user_phone" type="text" placeholder="+7 (9__) __-__" />
+          <button>Отправить</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <aside>
+          <img src="./img/white_logo.png" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+          </p>
+        </aside>
+        <div class="links">
+          <span>Ссылки</span>
+          <ul>
+            <li><a href="">Структура бизнеса</a></li>
+            <li><a href="">Наши услуги</a></li>
+            <li><a href="">Почему мы</a></li>
+            <li><a href="">Как работаем</a></li>
+            <li><a href="">Отзывы</a></li>
+          </ul>
+        </div>
+        <div class="payout">
+          <span>Способы оплаты</span>
+          <div class="payout__methods">
+            <div class="payout__methods__item"><img src="./img/payouts/paypal.svg" alt="" /></div>
+            <div class="payout__methods__item"><img src="./img/payouts/mir.png" alt="" /></div>
+            <div class="payout__methods__item"><img src="./img/payouts/visa.svg" alt="" /></div>
+            <div class="payout__methods__item">
+              <img src="./img/payouts/mastercard.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <button>Заполнить бриф</button>
+      </div>
+    </footer>
+
+    <!-- js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.3/imask.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>

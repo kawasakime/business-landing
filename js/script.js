@@ -5,6 +5,13 @@ const qualityItems = [
   { background: "#FFD2D2", shadow: "#F33737" },
 ];
 
+const servicesItems = [
+  { primary: "#37F382", secondary: "#44C979" },
+  { primary: "#F39D37", secondary: "#CE770F" },
+  { primary: "#3782F3", secondary: "#0A50B9" },
+  { primary: "#F33737", secondary: "#B70000" },
+];
+
 function standartAnimation(element, delay) {
   anime({
     targets: element,
@@ -12,6 +19,20 @@ function standartAnimation(element, delay) {
     translateX: 0,
     delay: delay,
     duration: 1000,
+  });
+}
+
+function animateTitle(element) {
+  //title main line
+  anime({
+    targets: element.querySelector(".title h1"),
+    translateY: 0,
+  });
+
+  //title second line
+  anime({
+    targets: element.querySelector(".title p"),
+    translateY: 0,
   });
 }
 
@@ -66,8 +87,6 @@ function animateMainSection() {
 }
 
 function animateSecondSection(element) {
-  document.querySelector("#second-section").scrollIntoView({ block: "center", behavior: "smooth" });
-
   //img container
   anime({ targets: element, translateX: 0 });
 
@@ -116,19 +135,210 @@ function animateSecondSection(element) {
 
       anime({
         targets: el.querySelector("p"),
-        opacity: 1
-      })
+        opacity: 1,
+      });
     }, 300 * i);
   });
 }
+
+function animateServicesSection(element) {
+  //title
+  animateTitle(element);
+
+  element.querySelector(".wrapper").style.overflow = "visible";
+
+  //service items
+  document.querySelectorAll("#services-section .services__item").forEach((item, i) => {
+    anime({
+      targets: item,
+      opacity: 1,
+      delay: i * 300,
+    });
+
+    const indicator = item.querySelector(".services__item-indicator");
+
+    //visible indicator
+    anime({
+      targets: indicator,
+      translateX: -13,
+      opacity: 1,
+      // delay: 200,
+      background: servicesItems[i].primary,
+    });
+
+    //change background indicator
+    anime({
+      targets: indicator,
+      duration: 2000,
+      background: servicesItems[i].primary,
+      delay: i + 400,
+      boxShadow: `0px 0px 20px ${servicesItems[i].primary}`,
+      duration: 1500,
+    });
+
+    //li
+    item.querySelectorAll(".services__item-list li").forEach((li, i) => {
+      anime({ targets: li, opacity: 1, duration: 4000, delay: i * 500 });
+    });
+
+    //price
+    anime({
+      targets: item.querySelector(".services__item-price"),
+      background: `linear-gradient(45deg, #d0d0d0, #d0d0d0,${servicesItems[i].primary}, ${servicesItems[i].secondary})`,
+      backgroundSize: "400% 400%",
+      backgroundPosition: "100% 50%",
+      boxShadow: `0 0 20px ${servicesItems[i].primary}`,
+    });
+  });
+}
+
+function animateWhatUsSection(element) {
+  animateTitle(element);
+
+  element.querySelectorAll(".cards__item").forEach((card, i) => {
+    anime({
+      targets: card,
+      opacity: 1,
+      duration: 2000,
+      delay: 200 * i,
+    });
+
+    anime({
+      targets: [card.querySelector("img"), card.querySelector("p"), card.querySelector("span")],
+      translateX: 0,
+      translateY: 0,
+      delay: 400 * i,
+      duration: 2000,
+    });
+  });
+}
+
+function animateHowWorkSection(element) {
+  animateTitle(element);
+
+  element.querySelectorAll(".cards__item").forEach((card, i) => {
+    setTimeout(() => {
+      anime({ targets: card, translateX: 0, duration: 1000 });
+      anime({
+        targets: [card.querySelector("span"), card.querySelector("p")],
+        opacity: 1,
+        delay: 250,
+      });
+    }, 200 * i);
+  });
+}
+
+function animateReviewsSection(element) {
+  animateTitle(element);
+
+  anime({ targets: element.querySelector(".certificate"), translateX: 0 });
+
+  element.querySelectorAll(".reviews__item").forEach((item, i) => {
+    anime({ targets: item, opacity: 1, delay: 300 * i });
+
+    item.querySelectorAll(".rating img").forEach((star, j) => {
+      anime({ targets: star, opacity: 1, delay: 300 * i + j * 200 });
+    });
+  });
+}
+
+function animateFormSection(element) {
+  anime({ targets: element.querySelector(".img-container"), right: 0 });
+
+  [
+    element.querySelector("span"),
+    ...element.querySelectorAll("p"),
+    ...element.querySelectorAll("form > *"),
+  ].forEach((item, i) => {
+    anime({
+      targets: item,
+      opacity: 1,
+      translateY: 0,
+      delay: 200 * i,
+    });
+  });
+}
+
+// PHONE MASK INPUT
+
+var element = document.querySelector("#form-section .user_phone");
+var maskOptions = {
+  mask: "+7 (000) 000 00-00",
+  lazy: false,
+};
+var mask = new IMask(element, maskOptions);
+
+// EMAIL MASK
+// var element2 = document.getElementById("email");
+// var maskOptions2 = {
+//   mask: function (value) {
+//     if (/^[a-z0-9_\.-]+$/.test(value)) return true;
+//     if (/^[a-z0-9_\.-]+@$/.test(value)) return true;
+//     if (/^[a-z0-9_\.-]+@[a-z0-9-]+$/.test(value)) return true;
+//     if (/^[a-z0-9_\.-]+@[a-z0-9-]+\.$/.test(value)) return true;
+//     if (/^[a-z0-9_\.-]+@[a-z0-9-]+\.[a-z]{1,4}$/.test(value)) return true;
+//     if (/^[a-z0-9_\.-]+@[a-z0-9-]+\.[a-z]{1,4}\.$/.test(value)) return true;
+//     if (/^[a-z0-9_\.-]+@[a-z0-9-]+\.[a-z]{1,4}\.[a-z]{1,4}$/.test(value)) return true;
+//     return false;
+//   },
+//   lazy: false,
+// };
+// var mask2 = new IMask(element2, maskOptions2);
+
+//----------------------------------
+
+// CHART
+
+
+//----------------------------------
 
 window.scrollTo(0, 0);
 animateMainSection();
 
 ScrollReveal().reveal("#second-section .imgs_container", {
-  delay: 0,
+  delay: 200,
   duration: 0,
   afterReveal: (element) => {
     animateSecondSection(element);
+  },
+});
+
+ScrollReveal().reveal("#services-section .services", {
+  delay: 0,
+  duration: 0,
+  afterReveal: () => {
+    animateServicesSection(document.querySelector("#services-section"));
+  },
+});
+
+ScrollReveal().reveal("#what-us-section .cards", {
+  delay: 0,
+  duration: 0,
+  afterReveal: () => {
+    animateWhatUsSection(document.querySelector("#what-us-section"));
+  },
+});
+
+ScrollReveal().reveal("#how-work-section .cards", {
+  delay: 0,
+  duration: 0,
+  afterReveal: () => {
+    animateHowWorkSection(document.querySelector("#how-work-section"));
+  },
+});
+
+ScrollReveal().reveal("#reviews-section .reviews", {
+  delay: 0,
+  duration: 0,
+  afterReveal: () => {
+    animateReviewsSection(document.querySelector("#reviews-section"));
+  },
+});
+
+ScrollReveal().reveal("#form-section .wrapper", {
+  delay: 0,
+  duration: 0,
+  afterReveal: () => {
+    animateFormSection(document.querySelector("#form-section"));
   },
 });

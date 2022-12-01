@@ -1,0 +1,70 @@
+.burger__button {
+  position: relative;
+  width: 40px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+.burger__button:hover {
+  opacity: 0.7;
+}
+.burger__button span {
+  position: relative;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: red;
+  z-index: 5;
+}
+.burger__button span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: red;
+  transition: 0.2s;
+  top: -10px;
+}
+.burger__button span::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: red;
+  transition: 0.2s;
+  bottom: -10px;
+}
+.burger__button.active {
+  position: relative;
+}
+.burger__button.active span {
+  position: relative;
+  z-index: 11;
+  background: white;
+}
+.burger__button.active span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: red;
+  transition: 0.2s;
+  background-color: white;
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger__button.active span::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: red;
+  transition: 0.2s;
+  transform: rotate(-45deg);
+  bottom: 0;
+  background-color: white;
+}
+
+/*# sourceMappingURL=burger.css.map */

@@ -1,0 +1,60 @@
+@mixin burgerLines {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: red;
+  transition: 0.2s;
+}
+
+.burger {
+  &__button {
+    position: relative;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    &:hover {
+      opacity: 0.7;
+    }
+    span {
+      position: relative;
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: red;
+      z-index: 5;
+      &::after {
+        @include burgerLines();
+        top: -10px;
+      }
+      &::before {
+        @include burgerLines();
+        bottom: -10px;
+      }
+    }
+    &.active {
+      position: relative;
+      span {
+        position: relative;
+        z-index: 11;
+        background: white;
+        &::after {
+          @include burgerLines();
+          background-color: white;
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &::before {
+          @include burgerLines();
+          transform: rotate(-45deg);
+          bottom: 0;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
